@@ -1,5 +1,5 @@
 const Highlight = props => (
-  <span className={'relative highlight highlight-${props.color}'}>
+  <span className={`relative highlight highlight-${props.color}`}>
     <span className="relative z-2">{props.children}</span>
   </span>
 );
@@ -15,29 +15,31 @@ const Intro = () => (
   </div>
 );
 
+const NavItem = props => (
+  <li className={`mh2-ns f6 f4-1 tc ${item.className}`}>
+    <a className='white no-underline' href={item.href}>{item.children}</a>
+  </li>
+)
+
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>About</li>
-      <li>Tickets</li>
-      <li><img src="../images/logo.svg" /></li>
-      <li>Journal</li>
-      <li>Contact</li>
+  <nav className='pt3 pt4-ns mb4 mb0-ns'>
+    <ul className='list flex flex-wrap flex-nowrap-ns justify-between items-center pa0 ma0'>
+      {menu.map(item =>
+        <NavItem {...item} />)}
     </ul>
   </nav>
-)
+);
 
 const App = () => (
   <div>
     <div className="min-vh-100 ph4 flex flex-column">
-      {}
+      <Nav />
       <Intro />
-      {}
     </div>
     <div className="flex flex-wrap container">
       {}
     </div>
   </div>
-)
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
