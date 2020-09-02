@@ -1,5 +1,7 @@
 # Lost-In-Tokyo
 
+[Take a look!](http://lost-in-toyko.surge.sh/)
+
 Lost in Toyko is a directory of fun places to see in Tokyo, Japan.
 I created this landing page using React.js. 
 
